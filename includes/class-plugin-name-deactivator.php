@@ -32,6 +32,10 @@ class Plugin_Name_Deactivator {
 	public static function deactivate() {
 		delete_option( 'tvkvds_url_default' );
 		delete_option( 'tvkvds_url_custom' );
+		delete_option( 'tvkvds_url_option_default' );
+		delete_option( 'tvkvds_url_option_custom' );
+		delete_option( 'tvkvds_url_name_default' );
+		delete_option( 'tvkvds_url_name_custom' );
 	}
 
 	

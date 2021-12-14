@@ -34,10 +34,26 @@
             <tbody>
                 <tr>
                     <th>
-                    <label for="tvkvds_url">Get post info from: </label>
+                        <label for="tvkvds_url_custom">URL </label>
                     </th>
                     <td>
-                    <input type="text" id="tvkvds_url" name="tvkvds_url" value="<?php echo get_option( 'tvkvds_url' );?>" class="regular-text" placeholder="https://example.com" />
+                        <input type="text" id="tvkvds_url_custom" name="tvkvds_url_custom" value="<?php echo get_option( 'tvkvds_url_custom'); ?>" class="regular-text" placeholder="<?php echo get_option( 'tvkvds_url_default'); ?>" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="tvkvds_url_option">Option</label>
+                    </th>
+                    <td>
+                        <input type="text" id="tvkvds_url_option_custom" name="tvkvds_url_option_custom" value="<?php echo get_option( 'tvkvds_url_option_custom'); ?>" class="regular-text" placeholder="<?php echo get_option( 'tvkvds_url_option_default'); ?>" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="tvkvds_url_name">Name</label>
+                    </th>
+                    <td>
+                        <input type="text" id="tvkvds_url_name_custom" name="tvkvds_url_name_custom" value="<?php echo get_option( 'tvkvds_url_name_custom'); ?>" class="regular-text" placeholder="<?php echo get_option( 'tvkvds_url_name_default'); ?>" />
                     </td>
                 </tr>
             </tbody>
@@ -47,7 +63,28 @@
             </p>
         </form>
             
-            
+        <hr class=" "> 
+
+        <?php 
+
+        $url = get_option( 'tvkvds_url_default') . '/' . get_option( 'tvkvds_url_option_default' ) . '/' . get_option( 'tvkvds_url_name_default' );
+        echo $url . 'responds with: ';
+
+        $options = array(
+            'http' => array(
+                'header' => 'Accept: application/json'
+            )
+        );
+
+        $context = stream_context_create($options);
+        $data = json_decode( file_get_contents( $url, false, $context ) );
+
+        ?>
+
+        <h1><?php echo $data->message; ?></h1>
+        <span><?php echo $data->subtitle; ?> </span>
+        
+        
             
        
     </div>

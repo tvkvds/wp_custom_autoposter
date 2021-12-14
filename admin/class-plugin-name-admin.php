@@ -127,7 +127,9 @@ class Plugin_Name_Admin {
 	 * @since    1.0.0
 	 */
 	public function register_autoposter_settings(){
-		register_setting( 'autoposter_general_settings', 'tvkvds_url' );
+		register_setting( 'autoposter_general_settings', 'tvkvds_url_custom' );
+		register_setting( 'autoposter_general_settings', 'tvkvds_url_name_custom' );
+		register_setting( 'autoposter_general_settings', 'tvkvds_url_option_custom' );
 	}
 
 }

@@ -180,6 +180,8 @@ class Plugin_Name {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		$this->loader->add_shortcode( 'tammie_test', $plugin_public, 'tvkvds_test');
+
 	}
 
 	/**

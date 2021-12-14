@@ -100,4 +100,8 @@ class Plugin_Name_Public {
 
 	}
 
+	public function tvkvds_test() {
+		echo ('yeet');
+	}
+
 }
