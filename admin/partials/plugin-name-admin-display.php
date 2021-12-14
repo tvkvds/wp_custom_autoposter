@@ -67,8 +67,10 @@
 
         <?php 
 
+        // TODO create filter hook with this
+
         $url = get_option( 'tvkvds_url_default') . '/' . get_option( 'tvkvds_url_option_default' ) . '/' . get_option( 'tvkvds_url_name_default' );
-        echo $url . 'responds with: ';
+        echo $url . ' responds with: ';
 
         $options = array(
             'http' => array(
