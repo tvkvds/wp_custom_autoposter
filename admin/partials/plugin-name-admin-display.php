@@ -64,6 +64,7 @@
         </form>
             
         <hr class=" "> 
+        <h2>Example request</h2>
 
         <?php 
 
@@ -83,7 +84,7 @@
 
         ?>
 
-        <h1><?php echo $data->message; ?></h1>
+        <h4><?php echo $data->message; ?></h4>
         <span><?php echo $data->subtitle; ?> </span>
         
         

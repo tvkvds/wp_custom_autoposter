@@ -34,7 +34,7 @@ class Plugin_Name_Activator {
 		add_option( 'tvkvds_url_custom' , '' );
 		add_option( 'tvkvds_url_name_default' , 'TVKVDS_autoposter' );
 		add_option( 'tvkvds_url_name_custom' , '' );
-		add_option( 'tvkvds_url_option_default' , 'maybe' );
+		add_option( 'tvkvds_url_option_default' , 'dumbledore' );
 		add_option( 'tvkvds_url_option_custom' , '' );
 	}
 
